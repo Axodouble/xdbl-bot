@@ -1,3 +1,5 @@
+const { ModalBuilder, ActionRowBuilder, TextInputBuilder } = require("discord.js");
+
 // @ts-check
 module.exports = {
   /**
@@ -10,4 +12,26 @@ module.exports = {
     }
     return interaction.reply(content);
   },
+
+  /**
+   * 
+   */
+  messageBuilder: function messageBuilder(interaction) {
+    // #TODO: Seperated system to create a full discord message 
+    // with all customization options.
+
+  }
 };
+
+function messageContentBuilder(interaction) {
+  let modal = new ModalBuilder()
+    .setTitle("Message Content")
+    .setCustomId("builder-message-content")
+    .addComponents(
+      new ActionRowBuilder().addComponents(
+        new TextInputBuilder()
+      )
+    )
+
+
+}
