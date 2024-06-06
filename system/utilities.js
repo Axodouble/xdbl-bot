@@ -28,6 +28,7 @@ module.exports = {
 };
 
 /**
+ * Responds to the interaction with a message content builder.
  * @param {import("discord.js").ChatInputCommandInteraction} interaction
  */
 function contentBuilderInteraction(interaction) {
@@ -52,6 +53,7 @@ function contentBuilderInteraction(interaction) {
 }
 
 /**
+ * Responds to the interaction with an embed builder.
  * @param {import("discord.js").ChatInputCommandInteraction} interaction
  */
 function embedBuilderInteraction(interaction) {
