@@ -17,6 +17,29 @@ const guildSchema = new Schema({
       default: [],
     },
   },
+  tickets: {
+    panels: {
+      type: Array,
+      default: [
+        {
+          channel: "",
+          message: "",
+          buttons: [
+            { // Default button ID = channel-message-button
+              id: "button",
+              label: "Create Ticket",
+              style: "PRIMARY",
+              emoji: "🎫",
+              permission: {
+                type: "USER",
+                id: "",
+              }
+            }
+          ]
+        },
+      ]
+    }
+  },
   autoroles: {
     type: Array,
     default: [],
